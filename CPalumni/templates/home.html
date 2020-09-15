@@ -1,0 +1,19 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+  <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+{% else %}
+  <p>Welcome To</p>
+  <p>Code Platoon Alumni</p>
+  <p>Network</p>
+  <a href="{% url 'login' %}">Please Log In</a>
+  <p>Or Sign Up If Not A User</p>
+  <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+{% endblock %}
