@@ -27,6 +27,7 @@ class SignUpView(generic.CreateView):
 #     template_name = 'registration/signup.html'
 # remake stuff
 class UsersViewSet(viewsets.ModelViewSet):
+    template_name = 'userinfo/emailsubmit.html'
     queryset = Users.objects.all()
     serializer_class = UsersSerializer
 
