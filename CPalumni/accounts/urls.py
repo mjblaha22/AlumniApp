@@ -7,7 +7,7 @@ from rest_framework.routers import DefaultRouter
 #     path('signup/', SignUpView.as_view(), name='signup'),
 # ]
 router = DefaultRouter()
-router.register(r'signup', SignUpView, basename='signup')
+router.register(r'signup', SignUpView.as_view(), basename='signup')
 router.register(r'user', UsersViewSet, basename='user')
 router.register(r'emails', EmailsViewSet, basename='emails')
 router.register(r'events', EventsViewSet, basename='events')
