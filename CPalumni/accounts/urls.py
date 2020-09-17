@@ -5,14 +5,14 @@ from rest_framework.routers import DefaultRouter
 
 urlpatterns = [
     path('signup/', SignUpView.as_view(), name='signup'),
-    path('user/', UsersViewSet, name='user'),
-    path('emails', EmailsViewSet, name='emails'),
-    path('events', EventsViewSet, name='events'),
-    path('locations', LocationsViewSet, name='locations'),
-    path('businesses', BusinessesViewSet, name='businesses'),
-    path('messages', MessagesViewSet, name='messages'),
-    path('responses', ResponsesViewSet, name='responses'),
-    path('userbusiness', User_BusinessViewSet, name='userbusiness'),
+    path('user/', UsersViewSet.as_view({'get': 'list'}), name='user'),
+    path('emails/', EmailsViewSet.as_view({'get': 'list'}), name='emails'),
+    path('events/', EventsViewSet.as_view({'get': 'list'}), name='events'),
+    path('locations/', LocationsViewSet.as_view({'get': 'list'}), name='locations'),
+    path('businesses/', BusinessesViewSet.as_view({'get': 'list'}), name='businesses'),
+    path('messages/', MessagesViewSet.as_view({'get': 'list'}), name='messages'),
+    path('responses/', ResponsesViewSet.as_view({'get': 'list'}), name='responses'),
+    path('userbusiness/', User_BusinessViewSet.as_view({'get': 'list'}), name='userbusiness'),
 
 ]
 # router = DefaultRouter()
