@@ -15,12 +15,16 @@ from rest_framework.views import APIView
 # from .serializers import UserSerializerWithToken
 
 
-class SignUpView(generic.CreateView):
+# class SignUpView(generic.CreateView):
+#     form_class = UserCreationForm
+#     success_url = reverse_lazy('login')
+#     template_name = 'registration/signup.html'
+# Create your views here.
+# EXTRA TEST
+class SignUpView(viewsets.ModelViewSet):
     form_class = UserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
-# Create your views here.
-
 # remake stuff
 class UsersViewSet(viewsets.ModelViewSet):
     queryset = Users.objects.all()
