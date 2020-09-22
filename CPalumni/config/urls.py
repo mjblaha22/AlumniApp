@@ -29,6 +29,7 @@ urlpatterns = [
     # accounts/password_reset/done/ [name='password_reset_done']
     # accounts/reset/<uidb64>/<token>/ [name='password_reset_confirm']
     # accounts/reset/done/ [name='password_reset_complete']
-    path('accounts/signup', TemplateView.as_view(template_name='home.html'), name='signup'),
+    path('accounts/emails/', TemplateView.as_view(template_name='home.html'), name='emails'),
+    path('accounts/signup/', TemplateView.as_view(template_name='home.html'), name='signup'),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
 ]
